@@ -252,16 +252,21 @@ align-content: center;}
     .right{
       text-align: right;
     }
+    #bandmates{text-align:left}
 
       @media (max-width: 768px){
 
       header{
         flex-direction: column;
       }
-
+      .logo, .sections{
+        justify-content: center;
+      }
       .logo__img{
         width:168px;
       }
+        #bandmates, #cta-top{
+          text-align: center}
       main{
         width: 100%;
         padding: 8px;
@@ -360,7 +365,7 @@ vibe for your venue.
     </a>
         <br>
         <br>
-        <div style="text-align: right;">
+        <div id="cta-top" class="right">
         <strong class="myScript">Wondering how to book?</strong>
         <br>
         <a class="purple contact" href="mailto:lizzieg3@mac.com">Invite us Aboard!</a>
@@ -368,7 +373,7 @@ vibe for your venue.
       <!-- </p> -->
     </section>
 <section id="members">
-    <h1 style="text-shadow: 0 3px 2px white;text-align: left;">About The Bandmates!</h1>
+    <h1 id="bandmates" style="text-shadow: 0 3px 2px white;">About The Bandmates!</h1>
     <section class="mem" id="Dave">
         <div class="mem__head">
             <div class="mem__head--img">
