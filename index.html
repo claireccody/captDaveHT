@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Capt Dave & High Tide -- NJ Based Band</title>
+  <meta name="description" content="Clean, intentional websites for creatives, artists, and practitioners." />
+  <style>
+
+        @font-face{
+      font-family: 'MyScript';
+      src: url(./Myscript_num-Regular.ttf) format('truetype');
+      font-weight: normal;
+    font-style: normal;
+    }
+    @import url('https://fonts.googleapis.com/css2?family=Delius&family=Lavishly+Yours&display=swap');
+
+    .myScript{
+      font-family: 'MyScript', sans-serif !important;
+      
+    }
+    .impact{
+font-family: "Delius", cursive;
+  font-weight: 400;
+  font-style: normal;
+    }
+    *{
+      box-sizing: border-box;
+    }
+    ul, ol,p{
+      font-family: 'MyScript', sans-serif;
+      font-size:larger;
+    }
+    body {
+      margin: 0;
+      line-height: 1.6;
+      color: #111;
+      background: #fafafa;
+    }
+
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 8px 32px;
+    }
+
+    h1,
+    h2,
+    h3 {
+      line-height: 1.2;
+      font-family: "Delius", cursive;
+  font-weight: 400;
+  font-style: normal;
+          color: #0c565d;
+    }
+
+    h3{
+        text-align: center;
+      color: rgb(195, 63, 30);
+    }
+    h2{
+        text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      text-align: center;
+      color: black;
+    }
+
+    section {
+      margin-top: 3rem;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    a:hover{
+        text-decoration: underline;
+    }
+
+    .cta {
+      margin-top: 2rem;
+      font-weight: 600;
+    }
+
+    .contact{
+      color:#0c565dde;
+    }
+
+   .contact:hover{
+      text-decoration: underline;
+    }
+
+    header{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      background-image: linear-gradient(to right, #d7ac11, #d77711);
+      box-shadow: 0px 4px 12px #d7ac11;
+      color: white;
+    }
+
+    .mem{
+        background-image: linear-gradient(to top, #d7771177, white, white);
+        box-shadow: 0 4px 8px #0b199244;
+    }
+
+    .logo{
+      display: flex;
+      flex-direction: row;
+    }
+
+    .links{
+      display: flex;
+      flex-direction: row;
+      text-decoration: none !important;
+      list-style-type: none;
+      margin: 32px 16px;
+    }
+
+    .link{
+      margin:4px;
+      background-color: #ffffff99;
+      padding: 4px;
+      border-radius: 4px;
+      color: #0c565dde;
+      box-shadow: 0 2px 4px white;
+      font-weight: bold;
+      text-align: center;
+    }
+    .link:hover{
+      box-shadow: none;
+    }
+   a{
+        align-items: center;
+      justify-content: center;
+      font-size: larger;
+    }
+
+    .logo__img{
+      display: flex;
+      min-width:100px;
+      max-width: 248px;
+      box-shadow: 0 4px 8px #ffffff;
+      border-radius: 4px;
+      border: .1px solid white;
+    }
+    .logo__img:hover{
+        box-shadow: none;
+        border: .5px solid white;
+    }
+
+
+    .logo__img--wrapper{
+      background-color: #ffffff;
+      max-height: 92px;
+    }
+
+    footer{
+      width: 100%;
+      align-items: center;
+      text-align: center;
+      margin: 48px 0 0 0;
+     background-image: linear-gradient(to left, #d7ac11, #d77711);
+      box-shadow: inset 0 8px 64px #d7ac11;
+      box-shadow: 0 0 8px 2px white;
+      padding: 48px 0;
+    }
+    
+    body{
+      background-image: linear-gradient(white,#0c565dde, #0b1992);
+    }
+
+    section{
+      border: .1px solid #d7ac11;
+      border-radius: 6px;
+      background-color: #ffffffcc;
+      box-shadow: 0px 8px 12px #d7ac1199;
+      padding: 16px 24px;
+
+    }
+
+    .mem-link{
+        text-align: center;
+    }
+
+    .mem-link__img{
+        max-width:70%;
+    }
+
+    .mem-link__img--wrapper{
+        background-image: linear-gradient(to top, #d7771177, white, white);
+        border: .1px solid #0b1992;
+      border-radius: 6px;
+    }
+    .mem-link__img--wrapper:hover{
+        box-shadow: 0 2px 4px #0b1992;
+    }
+    .gal__wrapper{
+        max-width: 100%;
+        margin: 0;
+        padding:0;
+        align-content: center;
+    }
+    .gal{
+        width:100%;
+        border-radius: 6px;
+        box-shadow: 0 0 4px 4px #0b199244;
+        border: .5px solid white;
+    }
+    #gallery{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+  gap: 10px; /* Adds space between grid items */
+    }
+    /* .mem-link{
+        display: flex;
+        flex-direction: row;
+    } */
+
+    #members{text-align: center;}
+
+    .mem__head{
+        display: flex;
+        flex-direction: row;
+
+    }
+    .mem__head--img{
+        width: 45%;
+        align-content: center;
+        }
+    .mem__head--title{
+        font-size: x-large;
+        width:55%;
+    text-align: right;
+align-content: center;}
+
+    .purple{
+      font-weight: bold;
+      color:#0b1992;
+      /* #0c565dde;*/
+      font-family: "Delius", cursive;
+  font-weight: 400;
+  font-style: normal;
+    }
+
+
+    .right{
+      text-align: right;
+    }
+
+      @media (max-width: 768px){
+
+      header{
+        flex-direction: column;
+      }
+
+      .logo__img{
+        width:168px;
+      }
+
+    }
+
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo"><a href="mailto:lizzieg3@mac.com">
+      <figure class="logo__img--wrapper">
+        <img src="./highTideLogo.JPG" alt="" class="logo__img">
+      </figure>
+      </a>
+    </div>
+    <div>
+      <h1 class="myScript" style="text-shadow: 0 0 4px #190c5d;"><a href="mailto:lizzieg3@mac.com" style="color:white;" class="impact"> Captain Dave & High Tide</a></h1>
+    </div>
+    <div class="sections">
+      <ul class="links">
+        <li class="link"><a  href="#members">Bandmate Bios</a></li>
+        <li class="link"><a  href="#gallery">View Gallery</a></li>
+        <li class="link">
+          <a class="contact" href="mailto:lizzieg3@mac.com">BOOK NOW!</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <main>
+    <section id="home">
+      <h1>Introducing... <br> <span class="purple">Captain Dave & High Tide</span>.</h1>
+      <audio controls style="width:100%; border-radius: 24px; height: 24px; box-shadow: 0 0 4px 4px #0c565d44;background-color: #0c565d;">
+        <source src="ExcuseMe(1).mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <a target="_blank" href="https://drive.google.com/file/d/1FBzY7DOvi2NHNOLDEBLsatEFUde6xv8a/view?usp=sharing" class="purple">Watch Us Perform!</a>
+      
+      <p style="text-align: center;">
+        We would like to introduce you to <span class="purple"> Captain Dave and High Tide</span>. We perform an eclectic mix of
+genres, and originals written by our members, which give our music a unique sound.
+We have been fortunate to perform with one another as well as with world-renowned musicians,
+and we bring those experiences to our music. We have a dedicated following who come to enjoy
+dinner and our shows. We strive to connect with the audience, and our goal is to create the right
+vibe for your venue.
+      </p>
+
+      <h3>Meet Our Members!</h3>
+      <!-- <p style="text-align: center;"> -->
+        <a href="#Dave"class="mem-link">
+            <figure class="mem-link__img--wrapper">
+                <img src="./compressed_david0.JPG" alt="" class="mem-link__img">
+            
+        <p class="purple"><strong>Dave Basile</strong> -- Rhythm Guitar</p>
+    </figure>    
+    </a>
+        <a href="#Liz" class="mem-link">
+            <figure class="mem-link__img--wrapper">
+                <img src="./liz0.JPG" alt="" class="mem-link__img">
+            
+        <p class="purple"><strong>Liz George</strong> -- Vocals and Percussion</p>
+    </figure>    
+    </a>
+    <a href="#Mark"class="mem-link">
+        <figure class="mem-link__img--wrapper">
+            <img src="./compressed_mark0.JPG" alt="" class="mem-link__img">
+        
+    <p class="purple"><strong>Mark Bonifacio</strong> -- Lead Guitar</p>
+</figure>    
+</a>
+        <a href="#Jim"class="mem-link">
+            <figure class="mem-link__img--wrapper">
+                <img src="./jim0.JPG" alt="" class="mem-link__img">
+            
+        <p class="purple"><strong>Jim Anzalone</strong> -- Bass Guitar</p>
+    </figure>    
+    </a>
+        <br>
+        <br>
+        <div style="text-align: right;">
+        <strong class="myScript">Wondering how to book?</strong>
+        <br>
+        <a class="purple contact" href="mailto:lizzieg3@mac.com">Invite us Aboard!</a>
+    </div>
+      <!-- </p> -->
+    </section>
+<section id="members">
+    <h1 style="text-shadow: 0 3px 2px white;text-align: left;">About The Bandmates!</h1>
+    <section class="mem" id="Dave">
+        <div class="mem__head">
+            <div class="mem__head--img">
+                <img src="compressed_david0.JPG" style="width: 100%;box-shadow: 0 0 4px 2px #0c565d;">
+            </div>
+        <div class="mem__head--title">
+        <h2><strong>~ Dave Basile ~</strong></h2>
+        <h3>Rhythm Guitar</h3>
+    </div>
+    </div>
+        <p>
+            <span class="purple">
+            Dave Basile, <i>Captain Dave</i>,</span> played music from an early age as a drummer for a popular Rock
+group. His band opened up for the Left Banke (Just Walk Away Renee and Pretty Ballerina).
+They also opened for Ruby and the Romantics (Our Day Will Come). Captain Dave has also
+appeared on stage with Willie Nile, American Singer/Songwriter. Dave has performed several
+times at Cafe Artiste, a prestigious venue in Ocean Grove, New Jersey for original
+singers/songwriters. Dave plays guitar, sings, and is the leader of <span class="purple"><i>Captain Dave &amp; High Tide.</i></span>
+        </p>
+    </section>
+    <section class="mem" id="Liz">
+        <div class="mem__head">
+            <div class="mem__head--img">
+                <img src="liz0.JPG" style="width: 100%;box-shadow: 0 0 4px 2px #0c565d;">
+            </div>
+        <div class="mem__head--title">
+        <h2><strong>~ Liz George ~</strong></h2>
+        <h3>Vocals & Percussion</h3>
+        </div>
+        </div>
+        <p>
+            <span class="purple">
+            Liz George</span> is a vocalist and a percussionist who studied Classical voice with Seymour Osborne,
+            where she sang arias for Luciano Pavarotti and Fred Gwynne, and Rock and Blues voice with
+            Joyce Bryant. She has performed with Grammy winners Chuck Mangione, David Crosby, Gloria
+            Gaynor, and Ken Neill (Twisted Sister) opening for Darlene Love (Grammy winner) and Max
+            Weinberg. Liz has also performed with International Blues and Jazz Awards winner, Joel Perry;
+            Blues Awards winner, Son Lewis, Blues Hall of Fame winner, Bobby Kyle, and PP Junior; Tony
+            Award winner, Melba Moore; Gospel recording star, Mattie Moultrie Wilson; and Funk and Soul
+            recording star, Buddy Hanks (Aurra, Young and Company, and Steve Arrington’s Hall of Fame).
+        </p>
+    </section>
+    <section class="mem" id="Mark">
+        <div class="mem__head">
+            <div class="mem__head--img">
+                <img src="compressed_mark0.JPG" style="width: 100%;box-shadow: 0 0 4px 2px #0c565d;">
+            </div>
+        <div class="mem__head--title">
+        <h2><strong>~ Mark Bonifacio ~</strong></h2>
+        <h3>Lead Guitar</h3>
+        </div>
+        </div>
+        <p>
+            <span class="purple">
+            Mark Bonifacio</span> has been playing guitar in bands for 30 years.  Starting while in college in
+            Rochester, NY in the 1990s, most of his time has been spent in bands around the NYC area,
+            including locations such as Mexicali Blues Cafe in Teaneck, NJ, The Turning Point in Piermont,
+            NY, and The Rye Roadhouse in Rye, NY.  Mark plays a wide variety of music styles, with
+            influences from various genres including Jam bands, British Rock, Classic Rock, Country, and
+            Reggae.</p>
+    </section>
+    <section class="mem" id="Jim">
+        <div class="mem__head">
+            <div class="mem__head--img">
+                <img src="jim0.JPG" style="width: 100%;box-shadow: 0 0 4px 2px #0c565d;">
+            </div>
+        <div class="mem__head--title">
+        <h2><strong>~ Jim Anzalone ~</strong></h2>
+        <h3>Bass Guitar</h3>
+        </div>
+        </div>
+        <p>
+            <span class="purple">
+            Jim Anzalone</span> started playing guitar in high school.  He played in a band called Rage with his
+            sister and friend, Rick.  Jim started a band with his new best friend, Kevin, after high school. 
+            Kevin told Jim, “We can’t find a bass player, so you are it.”  Jim continued to play with Kevin for
+            many years teaching himself bass.  Jim decided to get serious and take bass lessons at age 55.
+            Ten years later he continues to take bass lessons from Rob Smith.  Jim plays with Kevin in
+            BeerKanChickin and <span class="purple">Captain Dave &amp; High Tide</span>.  Jim loves playing bass and jamming with his
+            friends.</p>
+    </section>
+
+</section>
+
+    <section id="gallery" class="myScript">
+        <figure class="gal__wrapper">
+            <img src="d0.JPG" class="gal">
+        </figure>
+        <figure class="gal__wrapper">
+            <img src="group0.JPG" class="gal">
+        </figure>
+
+
+        <figure class="gal__wrapper">
+            <img src="d1.jpg" class="gal">
+        </figure>
+        <figure class="gal__wrapper">
+            <img src="ld0.JPG" class="gal">
+        </figure>
+        <figure class="gal__wrapper">
+            <img src="d4.JPG" class="gal">
+        </figure>
+
+        <figure class="gal__wrapper">
+            <img src="d2(1).png" class="gal">
+        </figure>
+      
+    </section>
+
+
+  </main>
+  <footer >
+    <a class="cta purple contact" target="_blank" href="https://soundcloud.com/lizgeorgemusic?ref=clipboard&amp;p=i&amp;c=1&amp;si=7479096EEFF845AFA
+    D309E1D4BE1C824&amp;utm_source=clipboard&amp;utm_medium=text&amp;utm_campaign=social_s
+    haring">Check us out on SoundCloud</a><br>
+    <a class="cta purple contact" href="mailto:lizzieg3@mac.com" style="color:white;text-shadow: 0 2px 4px black;font-size: x-large;">Book the Band!
+    <figure>
+        <img src="./highTideLogo.JPG" alt="" class="logo__img" style="margin: 0 auto;background-color: white;box-shadow: 0 2px 4px #190c5def; width:50%;"></a>
+      </figure>
+      <br></a>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <a href="https://www.studioceiz.studio" target="_blank">
+      <img src="./personal-logo.png" style="width:5%;max-width: 40px; background-color: white;">
+
+    <p class="myScript" style="font-size: xx-small;"> &copy Claire Cody </p>
+    <p class="myScript" style="font-size: xx-small;"> Operating as StudioCeiz</p>
+</a>
+    </footer>
+</body>
+
+
+</html>
