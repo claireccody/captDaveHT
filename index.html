@@ -5,12 +5,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Capt Dave & High Tide -- NJ Based Band</title>
+    <script async src="https://tally.so/widgets/embed.js"></script>
   <meta name="description" content="Clean, intentional websites for creatives, artists, and practitioners." />
   <style>
 
         @font-face{
       font-family: 'MyScript';
-      src: url(./Myscript_num-Regular.ttf) format('truetype');
+      src: url(./assets/Myscript_num-Regular.ttf) format('truetype');
       font-weight: normal;
     font-style: normal;
     }
@@ -27,6 +28,7 @@ font-family: "Delius", cursive;
     }
     *{
       box-sizing: border-box;
+      scroll-behavior: smooth;
     }
     ul, ol,p{
       font-family: 'MyScript', sans-serif;
@@ -88,7 +90,8 @@ font-family: "Delius", cursive;
     }
 
     .contact{
-      color:#0c565dde;
+      color: rgb(195, 63, 30);
+
     }
 
    .contact:hover{
@@ -105,8 +108,9 @@ font-family: "Delius", cursive;
     }
 
     .mem{
-        background-image: linear-gradient(to top, #d7771177, white, white);
+        background-image: linear-gradient(to top, #0b199244, white, white);
         box-shadow: 0 4px 8px #0b199244;
+        border: 1px solid #0c565d
     }
 
     .logo{
@@ -173,6 +177,12 @@ font-family: "Delius", cursive;
     
     body{
       background-image: linear-gradient(white,#0c565dde, #0b1992);
+    }
+    body.mode{
+      background-image: url(./assets/highTideLogo.JPG), linear-gradient(#0c565dde, #0b1992);
+      background-position-x: center;
+      background-repeat: no-repeat;
+      position: fixed;
     }
 
     section{
@@ -254,6 +264,48 @@ align-content: center;}
     }
     #bandmates{text-align:left}
 
+    /** FORM STYLING **/
+      #form{
+      padding: 16px 16px 0px 16px;
+      background-image: linear-gradient(#d7ac91, #d77711,#0c565dde, #0b1992);
+      box-shadow: 0px 0 8px 2px white;
+      border-radius: 8px;
+      border: solid 2px #0b1992;
+      position:fixed;
+      min-height: 80vh;
+      min-width: 500px;
+      max-width: 720px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      transition: all 300ms ease;
+      align-items: center;
+      justify-content: center;
+    }
+      .sect{
+      transition:all 300ms ease;
+    }
+    .sect, footer{z-index: 1}
+
+    .hide{
+      opacity: 0;
+      max-height: 20vh;
+      z-index: -1;
+    }
+    .seek{
+      opacity: 100%;
+      z-index: 1;
+    }
+
+    .low{
+      opacity: 0%;
+    }
+    #openFormA:hover, #openFormB:hover, #openFormC:hover, #exit:hover{
+      cursor: pointer;
+    }
+
+
       @media (max-width: 768px){
 
       header{
@@ -290,16 +342,28 @@ align-content: center;}
         
 
     }
+ @media (max-width: 720px){
+      #form{
+        min-width:400px;
+      }
+    }
 
+    @media (min-width: 600px){
+              #memCards{display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+  gap: 10px; /* Adds space between grid items */
+  align-items: center;
+  justify-content: center;
+    }}
 
   </style>
 </head>
 
 <body>
-  <header>
+  <header id="top">
     <div class="logo"><a href="mailto:lizzieg3@mac.com">
       <figure class="logo__img--wrapper">
-        <img src="./highTideLogo.JPG" alt="" class="logo__img">
+        <img src="./assets/highTideLogo.JPG" alt="" class="logo__img">
       </figure>
       </a>
     </div>
@@ -311,21 +375,27 @@ align-content: center;}
         <li class="link"><a  href="#members">Bandmate Bios</a></li>
         <li class="link"><a  href="#gallery">View Gallery</a></li>
         <li class="link">
-          <a class="contact" href="mailto:lizzieg3@mac.com">BOOK NOW!</a>
+          <a class="contact" id="openFormA">BOOK NOW!</a>
         </li>
       </ul>
     </div>
   </header>
+       <div id="form" class="hide"
+      style="display: flex; flex-direction: column;">
+      <iframe   data-tally-src="https://tally.so/r/5Bx6jb" width="100%" height="500px"  frameborder="0" marginheight="0" marginwidth="0" title="Digital Studio Intake Questionnaire" style="border-radius:8px;border: 1px solid white"></iframe>
+      <button id="exit" class="impact" style="color: #0b1992;margin-top: 8px;" onclick="modalToggle()" style="padding-top: 8px;">EXIT FORM</button>
+    </div>
   <main>
-    <section id="home">
+    <section id="home" class="sect seek">
+      
       <h1>Introducing... <br> <span class="purple">Captain Dave & High Tide</span>.</h1>
+      
       <audio controls style="width:100%; border-radius: 24px; height: 24px; box-shadow: 0 0 4px 4px #0c565d44;background-color: #0c565d;">
-        <source src="ExcuseMe(1).mp3" type="audio/mpeg">
+        <source src="./assets/ExcuseMe(1).mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
-    <a target="_blank" href="https://drive.google.com/file/d/1FBzY7DOvi2NHNOLDEBLsatEFUde6xv8a/view?usp=sharing" class="purple">Watch Us Perform!</a>
-      
-      <p style="text-align: center;">
+    <a style="text-align: right;" target="_blank" href="https://drive.google.com/file/d/1FBzY7DOvi2NHNOLDEBLsatEFUde6xv8a/view?usp=sharing" class="cta impact contact">Watch Us Perform!</a>
+      <p style="text-align: center;background-color: #0c565d11;border-radius:16px;padding:12px">
         We would like to introduce you to <span class="purple"> Captain Dave and High Tide</span>. We perform an eclectic mix of
 genres, and originals written by our members, which give our music a unique sound.
 We have been fortunate to perform with one another as well as with world-renowned musicians,
@@ -334,50 +404,64 @@ dinner and our shows. We strive to connect with the audience, and our goal is to
 vibe for your venue.
       </p>
       <br>
-              <div id="cta-top" class="right">
+      <div style="display: flex; flex-direction: row; justify-content: space-between;">
+        <div class="socials">
+                 <a class="cta impact contact" target="_blank" href="https://soundcloud.com/lizgeorgemusic?ref=clipboard&amp;p=i&amp;c=1&amp;si=7479096EEFF845AFA
+    D309E1D4BE1C824&amp;utm_source=clipboard&amp;utm_medium=text&amp;utm_campaign=social_s
+    haring">Check us out on SoundCloud</a><br>    <a class="cta impact contact" target="_blank" href="https://www.facebook.com/people/Captain-Dave-High-Tide/61575141552870/">or Facebook!</a><br>
+   
+        </div>
+        <div id="cta-top" class="right" >
         <strong class="myScript">Wondering how to book?</strong>
         <br>
-        <a class="purple contact" href="mailto:lizzieg3@mac.com">Invite us Aboard!</a>
-
-      <h3>Meet Our Members!</h3>
+        <a class="impact contact" id="openFormB">Invite us Aboard!</a>
+</div></div>
+<hr style="color: #d77711; margin: 12px 0;">
+<div id="memCards"
+ style="background-color: #d7771111;padding: 4px;  border-radius:24px;">
+      <!-- <h3>Meet Our Members!</h3> -->
       <!-- <p style="text-align: center;"> -->
         <a href="#Dave"class="mem-link">
             <figure class="mem-link__img--wrapper">
-                <img src="./compressed_david0.JPG" alt="" class="mem-link__img">
+                      <p class="purple"><strong>Dave Basile</strong><br>Rhythm Guitar</p>
+
+                <img src="./assets/compressed_david0.JPG" alt="" class="mem-link__img" style="border-radius:4px; border: 1px solid white;">
             
-        <p class="purple"><strong>Dave Basile</strong> -- Rhythm Guitar</p>
     </figure>    
     </a>
         <a href="#Liz" class="mem-link">
             <figure class="mem-link__img--wrapper">
-                <img src="./liz0.JPG" alt="" class="mem-link__img">
+                      <p class="purple"><strong>Liz George</strong><br>Vocals and Percussion</p>
+
+                <img src="./assets/liz0.JPG" alt="" class="mem-link__img" style="border-radius:4px; border: 1px solid white;">
             
-        <p class="purple"><strong>Liz George</strong> -- Vocals and Percussion</p>
     </figure>    
     </a>
     <a href="#Mark"class="mem-link">
         <figure class="mem-link__img--wrapper">
-            <img src="./compressed_mark0.JPG" alt="" class="mem-link__img">
+              <p class="purple"><strong>Mark Bonifacio</strong><br>Lead Guitar</p>
+
+            <img src="./assets/compressed_mark0.JPG" alt="" class="mem-link__img" style="border-radius:4px; border: 1px solid white;">
         
-    <p class="purple"><strong>Mark Bonifacio</strong> -- Lead Guitar</p>
 </figure>    
 </a>
         <a href="#Jim"class="mem-link">
             <figure class="mem-link__img--wrapper">
-                <img src="./jim0.JPG" alt="" class="mem-link__img">
+                      <p class="purple"><strong>Jim Anzalone</strong><br>Bass Guitar</p>
+
+                <img src="./assets/jim0.JPG" alt="" class="mem-link__img" style="border-radius:4px; border: 1px solid white;">
             
-        <p class="purple"><strong>Jim Anzalone</strong> -- Bass Guitar</p>
     </figure>    
     </a>
     </div>
       <!-- </p> -->
     </section>
-<section id="members">
+<section id="members" class="sect seek">
     <h1 id="bandmates" style="text-shadow: 0 3px 2px white;">About The Bandmates!</h1>
     <section class="mem" id="Dave">
         <div class="mem__head">
-            <div class="mem__head--img">
-                <img src="compressed_david0.JPG" style="width: 100%;box-shadow: 0 0 4px 2px #0c565d;">
+            <div class="mem__head--img" >
+                <img src="./assets/compressed_david0.JPG" style="border-radius:4px;width: 100%;box-shadow: 0 0 6px 2px #0c565d;">
             </div>
         <div class="mem__head--title">
         <h2><strong>~ Dave Basile ~</strong></h2>
@@ -394,10 +478,11 @@ times at Cafe Artiste, a prestigious venue in Ocean Grove, New Jersey for origin
 singers/songwriters. Dave plays guitar, sings, and is the leader of <span class="purple"><i>Captain Dave &amp; High Tide.</i></span>
         </p>
     </section>
+    <hr style="color:#d77711; margin-top: 12px;">
     <section class="mem" id="Liz">
         <div class="mem__head">
             <div class="mem__head--img">
-                <img src="liz0.JPG" style="width: 100%;box-shadow: 0 0 4px 2px #0c565d;">
+                <img src="./assets/liz0.JPG" style="border-radius:4px;width: 100%;box-shadow: 0 0 6px 2px #0c565d;">
             </div>
         <div class="mem__head--title">
         <h2><strong>~ Liz George ~</strong></h2>
@@ -416,10 +501,11 @@ singers/songwriters. Dave plays guitar, sings, and is the leader of <span class=
             recording star, Buddy Hanks (Aurra, Young and Company, and Steve Arrington’s Hall of Fame).
         </p>
     </section>
+    <hr style="color:#d77711; margin-top: 12px;">
     <section class="mem" id="Mark">
         <div class="mem__head">
             <div class="mem__head--img">
-                <img src="compressed_mark0.JPG" style="width: 100%;box-shadow: 0 0 4px 2px #0c565d;">
+                <img src="./assets/compressed_mark0.JPG" style="border-radius:4px;width: 100%;box-shadow: 0 0 6px 2px #0c565d;">
             </div>
         <div class="mem__head--title">
         <h2><strong>~ Mark Bonifacio ~</strong></h2>
@@ -435,10 +521,11 @@ singers/songwriters. Dave plays guitar, sings, and is the leader of <span class=
             influences from various genres including Jam bands, British Rock, Classic Rock, Country, and
             Reggae.</p>
     </section>
+    <hr style="color:#d77711; margin-top: 12px;">
     <section class="mem" id="Jim">
         <div class="mem__head">
             <div class="mem__head--img">
-                <img src="jim0.JPG" style="width: 100%;box-shadow: 0 0 4px 2px #0c565d;">
+                <img src="./assets/jim0.JPG" style="border-radius:4px;width: 100%;box-shadow: 0 0 6px 2px #0c565d;">
             </div>
         <div class="mem__head--title">
         <h2><strong>~ Jim Anzalone ~</strong></h2>
@@ -458,40 +545,45 @@ singers/songwriters. Dave plays guitar, sings, and is the leader of <span class=
 
 </section>
 
-    <section id="gallery" class="myScript">
+    <section id="gallery" class="myScript sect seek">
         <figure class="gal__wrapper">
-            <img src="d0.JPG" class="gal">
+            <img src="./assets/d0.JPG" class="gal">
         </figure>
         <figure class="gal__wrapper">
-            <img src="group0.JPG" class="gal">
-        </figure>
-
-
-        <figure class="gal__wrapper">
-            <img src="d1.jpg" class="gal">
-        </figure>
-        <figure class="gal__wrapper">
-            <img src="ld0.JPG" class="gal">
-        </figure>
-        <figure class="gal__wrapper">
-            <img src="d4.jpg" class="gal">
+            <img src="./assets/group0.JPG" class="gal">
         </figure>
 
+
         <figure class="gal__wrapper">
-            <img src="d2(1).png" class="gal">
+            <img src="./assets/d1.jpg" class="gal">
+        </figure>
+        <figure class="gal__wrapper">
+            <img src="./assets/ld0.JPG" class="gal">
+        </figure>
+        <figure class="gal__wrapper">
+            <img src="./assets/d4.jpg" class="gal">
+        </figure>
+
+        <figure class="gal__wrapper">
+            <img src="./assets/d2(1).png" class="gal">
         </figure>
       
     </section>
 
 
   </main>
-  <footer >
-    <a class="cta purple contact" target="_blank" href="https://soundcloud.com/lizgeorgemusic?ref=clipboard&amp;p=i&amp;c=1&amp;si=7479096EEFF845AFA
+  <footer id="footer">
+
+       <a class="cta purple contact" target="_blank" href="https://soundcloud.com/lizgeorgemusic?ref=clipboard&amp;p=i&amp;c=1&amp;si=7479096EEFF845AFA
     D309E1D4BE1C824&amp;utm_source=clipboard&amp;utm_medium=text&amp;utm_campaign=social_s
-    haring">Check us out on SoundCloud</a><br>
-    <a class="cta purple contact" href="mailto:lizzieg3@mac.com" style="color:white;text-shadow: 0 2px 4px black;font-size: x-large;">Book the Band!
-    <figure>
-        <img src="./highTideLogo.JPG" alt="" class="logo__img" style="margin: 0 auto;background-color: white;box-shadow: 0 2px 4px #190c5def; width:50%;"></a>
+    haring">Check us out on SoundCloud</a><br>    <a class="cta purple contact" target="_blank" href="https://www.facebook.com/people/Captain-Dave-High-Tide/61575141552870/">or Facebook!</a><br>
+   <br>
+       <a class="cta purple contact" id="openFormC" style="color:white;text-shadow: 0 2px 4px black;font-size: x-large;">Book the Band!
+
+<!-- https://www.facebook.com/people/Captain-Dave-High-Tide/61575141552870/ -->
+
+      <figure>
+        <img src="./assets/highTideLogo.JPG" alt="" class="logo__img" style="margin: 0 auto;background-color: white;box-shadow: 0 2px 4px #190c5def; width:50%;"></a>
       </figure>
       <br></a>
       <br>
@@ -500,12 +592,13 @@ singers/songwriters. Dave plays guitar, sings, and is the leader of <span class=
       <br>
       <br>
       <a href="https://www.studioceiz.studio" target="_blank">
-      <img src="./personal-logo.png" style="width:5%;max-width: 40px; background-color: white;">
+      <img src="./assets/personal-logo.png" style="width:5%;max-width: 40px; background-color: white;">
 
     <p class="myScript" style="font-size: xx-small;"> &copy Claire Cody </p>
     <p class="myScript" style="font-size: xx-small;"> Operating as StudioCeiz</p>
 </a>
     </footer>
+    <script src="./dynamics.js"></script>
 </body>
 
 
