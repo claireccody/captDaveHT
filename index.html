@@ -32,7 +32,7 @@ font-family: "Delius", cursive;
     }
     ul, ol,p{
       font-family: 'MyScript', sans-serif;
-      font-size:larger;
+      font-size:large;
     }
     body {
       margin: 0;
@@ -42,7 +42,7 @@ font-family: "Delius", cursive;
     }
 
     main {
-      max-width: 900px;
+      max-width: 1200px;
       margin: auto;
       padding: 8px 32px;
     }
@@ -108,9 +108,10 @@ font-family: "Delius", cursive;
     }
 
     .mem{
-        background-image: linear-gradient(to top, #0b199244, white, white);
-        box-shadow: 0 4px 8px #0b199244;
-        border: 1px solid #0c565d
+        /* background-image: linear-gradient(to top, #0b199244, white, white); */
+        box-shadow: 0 4px 8px #00000000;
+        background-color: #ffffff;
+        border-radius: 0;
     }
 
     .logo{
@@ -171,12 +172,12 @@ font-family: "Delius", cursive;
       margin: 48px 0 0 0;
      background-image: linear-gradient(to left, #d7ac11, #d77711);
       box-shadow: inset 0 8px 64px #d7ac11;
-      box-shadow: 0 0 8px 2px white;
+      box-shadow: inset 0 0 8px 2px white;
       padding: 48px 0;
     }
     
     body{
-      background-image: linear-gradient(white,#0c565dde, #0b1992);
+      background-image: linear-gradient(#0c565d77,#d7771144);
     }
     body.mode{
       background-image: url(./assets/highTideLogo.JPG), linear-gradient(#0c565dde, #0b1992);
@@ -186,7 +187,6 @@ font-family: "Delius", cursive;
     }
 
     section{
-      border: .1px solid #d7ac11;
       border-radius: 6px;
       background-color: #ffffffcc;
       box-shadow: 0px 8px 12px #d7ac1199;
@@ -199,12 +199,14 @@ font-family: "Delius", cursive;
     }
 
     .mem-link__img{
-        max-width:70%;
+        max-width:100%;
     }
 
     .mem-link__img--wrapper{
         background-image: linear-gradient(to top, #d7771177, white, white);
-        border: .1px solid #0b1992;
+        /* border: .1px solid #0b1992; */
+        display: flex;
+        flex-direction: column;
       border-radius: 6px;
     }
     .mem-link__img--wrapper:hover{
@@ -223,9 +225,13 @@ font-family: "Delius", cursive;
         border: .5px solid white;
     }
     #gallery{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); 
-  gap: 10px; /* Adds space between grid items */
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: start;
+        background-image: linear-gradient(to right, #ffffff77, #ffffff22, #ffffff77),url("./assets/highTideLogo.JPG");
+        background-position:center;
+        background-size: cover;
     }
     /* .mem-link{
         display: flex;
@@ -246,8 +252,9 @@ font-family: "Delius", cursive;
     .mem__head--title{
         font-size: x-large;
         width:55%;
-    text-align: right;
-align-content: center;}
+    text-align: center;
+align-content: center;
+padding: 20px;}
 
     .purple{
       font-weight: bold;
@@ -305,6 +312,20 @@ align-content: center;}
       cursor: pointer;
     }
 
+    .sample{
+      box-shadow: 0 0px 4px 2px #0c565d;
+      background-color: #ffffff;
+      padding: 2px;
+      border-radius: 2px;
+
+    }
+
+    #memCards{
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+    }
 
       @media (max-width: 768px){
 
@@ -349,9 +370,9 @@ align-content: center;}
     }
 
     @media (min-width: 600px){
-              #memCards{display: grid;
-        grid-template-columns: repeat(2, 1fr); 
-  gap: 10px; /* Adds space between grid items */
+              #memCards{
+                display: flex;
+                flex-direction: row;
   align-items: center;
   justify-content: center;
     }}
@@ -373,7 +394,7 @@ align-content: center;}
     <div class="sections">
       <ul class="links">
         <li class="link"><a  href="#members">Bandmate Bios</a></li>
-        <li class="link"><a  href="#gallery">View Gallery</a></li>
+        <li class="link"><a  href="#live">Watch us Perform</a></li>
         <li class="link">
           <a class="contact" id="openFormA">BOOK NOW!</a>
         </li>
@@ -388,13 +409,12 @@ align-content: center;}
   <main>
     <section id="home" class="sect seek">
       
-      <h1>Introducing... <br> <span class="purple">Captain Dave & High Tide</span>.</h1>
+      <h1>Introducing... <br> <span class="purple">Captain Dave & High Tide</span></h1>
       
-      <audio controls style="width:100%; border-radius: 24px; height: 24px; box-shadow: 0 0 4px 4px #0c565d44;background-color: #0c565d;">
+      <!-- <audio controls style="width:100%; border-radius: 24px; height: 24px; box-shadow: 0 0 4px 4px #0c565d44;background-color: #0c565d;">
         <source src="./assets/ExcuseMe(1).mp3" type="audio/mpeg">
         Your browser does not support the audio element.
-    </audio>
-    <a style="text-align: right;" target="_blank" href="https://drive.google.com/file/d/1FBzY7DOvi2NHNOLDEBLsatEFUde6xv8a/view?usp=sharing" class="cta impact contact">Watch Us Perform!</a>
+    </audio> -->
       <p style="text-align: center;background-color: #0c565d11;border-radius:16px;padding:12px">
         We would like to introduce you to <span class="purple"> Captain Dave and High Tide</span>. We perform an eclectic mix of
 genres, and originals written by our members, which give our music a unique sound.
@@ -416,9 +436,11 @@ vibe for your venue.
         <br>
         <a class="impact contact" id="openFormB">Invite us Aboard!</a>
 </div></div>
-<hr style="color: #d77711; margin: 12px 0;">
-<div id="memCards"
- style="background-color: #d7771111;padding: 4px;  border-radius:24px;">
+<!-- <hr style="color: #d77711; margin: 12px 0;"> -->
+
+      <!-- </p> -->
+    </section>
+<div class="sect seek" id="memCards">
       <!-- <h3>Meet Our Members!</h3> -->
       <!-- <p style="text-align: center;"> -->
         <a href="#Dave"class="mem-link">
@@ -437,14 +459,6 @@ vibe for your venue.
             
     </figure>    
     </a>
-    <a href="#Mark"class="mem-link">
-        <figure class="mem-link__img--wrapper">
-              <p class="purple"><strong>Mark Bonifacio</strong><br>Lead Guitar</p>
-
-            <img src="./assets/compressed_mark0.JPG" alt="" class="mem-link__img" style="border-radius:4px; border: 1px solid white;">
-        
-</figure>    
-</a>
         <a href="#Jim"class="mem-link">
             <figure class="mem-link__img--wrapper">
                       <p class="purple"><strong>Jim Anzalone</strong><br>Bass Guitar</p>
@@ -454,12 +468,11 @@ vibe for your venue.
     </figure>    
     </a>
     </div>
-      <!-- </p> -->
-    </section>
-
-
+    <div class="sect seek" id="live">
+      <iframe src="https://drive.google.com/file/d/1FBzY7DOvi2NHNOLDEBLsatEFUde6xv8a/preview" width="100%" height="480"></iframe>
+</div>
     <section id="gallery" class="myScript sect seek">
-        <figure class="gal__wrapper">
+        <!-- <figure class="gal__wrapper">
             <img src="./assets/d0.JPG" class="gal">
         </figure>
         <figure class="gal__wrapper">
@@ -479,22 +492,51 @@ vibe for your venue.
 
         <figure class="gal__wrapper">
             <img src="./assets/d2(1).png" class="gal">
-        </figure>
-      
+        </figure> -->
+        <h2 class="sample" style="align-self: flex-end;">Captain Dave & High Tide Discography Samples</h2>
+        
+        <h3 class="sample">Excuse Me</h3>    
+        <audio controls style="width:100%; border-radius: 24px; height: 24px; box-shadow: 0 0 4px 4px #0c565d44;background-color: #0c565d;">
+        <source src="./assets/ExcuseMe(1).mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio> <hr>
+    <h3 class="sample">A Life That Is Good</h3>
+          <audio controls style="width:100%; border-radius: 24px; height: 24px; box-shadow: 0 0 4px 4px #0c565d44;background-color: #0c565d;">
+        <source src="./assets/A Life That Is Good.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio> <hr>
+    <h3 class="sample">You're So Vain</h3>
+          <audio controls style="width:100%; border-radius: 24px; height: 24px; box-shadow: 0 0 4px 4px #0c565d44;background-color: #0c565d;">
+        <source src="./assets/Your'e So Vain.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio> <hr>
+    <h3 class="sample">Valerie</h3>
+          <audio controls style="width:100%; border-radius: 24px; height: 24px; box-shadow: 0 0 4px 4px #0c565d44;background-color: #0c565d;">
+        <source src="./assets/Valerie.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio> <hr>
+    <h3 class="sample">No More Cloudy Days</h3>
+          <audio controls style="width:100%; border-radius: 24px; height: 24px; box-shadow: 0 0 4px 4px #0c565d44;background-color: #0c565d;">
+        <source src="./assets/No More Cloudy Days.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio> <hr>
+    <h3 class="sample">Captain Dave And High Tide Sampler Mix</h3>
+          <audio controls style="width:100%; border-radius: 24px; height: 24px; box-shadow: 0 0 4px 4px #0c565d44;background-color: #0c565d;">
+        <source src="./assets/Captain Dave And High Tide Sampler Mix.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio> <hr>
     </section>
+
 <section id="members" class="sect seek">
-    <h1 id="bandmates" style="text-shadow: 0 3px 2px white;">About The Bandmates!</h1>
+    <h1 id="bandmates" style="text-shadow: 0 3px 2px white;">About The Bandmates</h1>
     <section class="mem" id="Dave">
         <div class="mem__head">
             <div class="mem__head--img" >
                 <img src="./assets/compressed_david0.JPG" style="border-radius:4px;width: 100%;box-shadow: 0 0 6px 2px #0c565d;">
-            </div>
+            <h2>Rhythm Guitar</h2>
+              </div>
         <div class="mem__head--title">
-        <h2><strong>~ Dave Basile ~</strong></h2>
-        <h3>Rhythm Guitar</h3>
-    </div>
-    </div>
-        <p>
+                <p>
             <span class="purple">
             Dave Basile, <i>Captain Dave</i>,</span> played music from an early age as a drummer for a popular Rock
 group. His band opened up for the Left Banke (Just Walk Away Renee and Pretty Ballerina).
@@ -503,19 +545,20 @@ appeared on stage with Willie Nile, American Singer/Songwriter. Dave has perform
 times at Cafe Artiste, a prestigious venue in Ocean Grove, New Jersey for original
 singers/songwriters. Dave plays guitar, sings, and is the leader of <span class="purple"><i>Captain Dave &amp; High Tide.</i></span>
         </p>
+        
+    </div>
+    </div>
+
     </section>
     <hr style="color:#d77711; margin-top: 12px;">
     <section class="mem" id="Liz">
         <div class="mem__head">
             <div class="mem__head--img">
                 <img src="./assets/liz0.JPG" style="border-radius:4px;width: 100%;box-shadow: 0 0 6px 2px #0c565d;">
-            </div>
+            <h2>Vocals & Percussion</h2>
+              </div>
         <div class="mem__head--title">
-        <h2><strong>~ Liz George ~</strong></h2>
-        <h3>Vocals & Percussion</h3>
-        </div>
-        </div>
-        <p>
+                <p>
             <span class="purple">
             Liz George</span> is a vocalist and a percussionist who studied Classical voice with Seymour Osborne,
             where she sang arias for Luciano Pavarotti and Fred Gwynne, and Rock and Blues voice with
@@ -526,39 +569,22 @@ singers/songwriters. Dave plays guitar, sings, and is the leader of <span class=
             Award winner, Melba Moore; Gospel recording star, Mattie Moultrie Wilson; and Funk and Soul
             recording star, Buddy Hanks (Aurra, Young and Company, and Steve Arrington’s Hall of Fame).
         </p>
-    </section>
-    <hr style="color:#d77711; margin-top: 12px;">
-    <section class="mem" id="Mark">
-        <div class="mem__head">
-            <div class="mem__head--img">
-                <img src="./assets/compressed_mark0.JPG" style="border-radius:4px;width: 100%;box-shadow: 0 0 6px 2px #0c565d;">
-            </div>
-        <div class="mem__head--title">
-        <h2><strong>~ Mark Bonifacio ~</strong></h2>
-        <h3>Lead Guitar</h3>
+        
         </div>
         </div>
-        <p>
-            <span class="purple">
-            Mark Bonifacio</span> has been playing guitar in bands for 30 years.  Starting while in college in
-            Rochester, NY in the 1990s, most of his time has been spent in bands around the NYC area,
-            including locations such as Mexicali Blues Cafe in Teaneck, NJ, The Turning Point in Piermont,
-            NY, and The Rye Roadhouse in Rye, NY.  Mark plays a wide variety of music styles, with
-            influences from various genres including Jam bands, British Rock, Classic Rock, Country, and
-            Reggae.</p>
+
     </section>
     <hr style="color:#d77711; margin-top: 12px;">
-    <section class="mem" id="Jim">
+   <section class="mem" id="Jim">
         <div class="mem__head">
             <div class="mem__head--img">
                 <img src="./assets/jim0.JPG" style="border-radius:4px;width: 100%;box-shadow: 0 0 6px 2px #0c565d;">
-            </div>
+              <h2>Bass Guitar</h2>
+              </div>
         <div class="mem__head--title">
-        <h2><strong>~ Jim Anzalone ~</strong></h2>
-        <h3>Bass Guitar</h3>
-        </div>
-        </div>
-        <p>
+        
+        
+                <p>
             <span class="purple">
             Jim Anzalone</span> started playing guitar in high school.  He played in a band called Rage with his
             sister and friend, Rick.  Jim started a band with his new best friend, Kevin, after high school. 
@@ -567,6 +593,9 @@ singers/songwriters. Dave plays guitar, sings, and is the leader of <span class=
             Ten years later he continues to take bass lessons from Rob Smith.  Jim plays with Kevin in
             BeerKanChickin and <span class="purple">Captain Dave &amp; High Tide</span>.  Jim loves playing bass and jamming with his
             friends.</p>
+        </div>
+        </div>
+
     </section>
 
 </section>
