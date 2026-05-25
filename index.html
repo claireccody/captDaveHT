@@ -326,6 +326,30 @@ padding: 20px;}
       justify-content: center;
       margin: 0 auto;
     }
+    .images{
+
+  /* display: grid;
+  grid-template-rows: repeat(2, 200px);
+  grid-auto-flow: column;
+  width: 100%;
+  gap: 0px;
+  justify-content: center;
+  align-items: center; */
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+    }
+    .images img{
+      max-height: 200px;
+    }
+
+    @media (max-width: 1200px){
+    .images img{
+      max-height: 125px;
+    }
+
+    }
 
       @media (max-width: 768px){
 
@@ -360,6 +384,9 @@ padding: 20px;}
         min-width:100%;
     text-align: center;
 align-content: center;}
+    .images img{
+      height:100px;
+    }
         
 
     }
@@ -375,7 +402,14 @@ align-content: center;}
                 flex-direction: row;
   align-items: center;
   justify-content: center;
-    }}
+    }  }
+
+    @media (max-width: 568px) {
+          .images img{
+      height: 75px;
+    }
+      
+    }
 
   </style>
 </head>
@@ -435,10 +469,21 @@ vibe for your venue.
         <strong class="myScript">Wondering how to book?</strong>
         <br>
         <a class="impact contact" id="openFormB">Invite us Aboard!</a>
-</div></div>
+</div>
+
+</div>
 <!-- <hr style="color: #d77711; margin: 12px 0;"> -->
 
       <!-- </p> -->
+       <div class="images">
+  <img src="./assets/david.JPG" alt="">
+  <img src="./assets/dl0.JPG" alt="">
+  <img src="./assets/jim.JPG" alt="">
+  <img src="./assets/liz.JPG" alt="">
+  <!-- <img src="./assets/dl1.JPG" alt=""> -->
+  <!-- <img src="./assets/l1.JPG" alt=""> -->
+  <img src="./assets/dl2.JPG" alt="">
+</div>
     </section>
 <div class="sect seek" id="memCards">
       <!-- <h3>Meet Our Members!</h3> -->
